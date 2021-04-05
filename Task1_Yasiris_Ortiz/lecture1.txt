@@ -1,0 +1,91 @@
+linux commands
+cat text.tx ? 
+
+ls -al -> 
+
+access system call: permissions for weather the file exits it takes
+two arguments(file_path, execure_permission_to_check)
+- 
+
+errno: this is a global variable that can be access to now what is the eeror when making a system call 
+
+code snippet: 
+
+whatever code that is inseide the function will be execited, 
+argc: means argument count
+argv[]: argument that's being pass to the function 
+
+
+commands to execute c files 
+
+./a.out sample.text => this is how we pass the arguments, when we do this argv = ["a.out", "sample.text"]
+if we don't pass any argument then argv =["a.out"].
+You can pass more than one argument just by putting a space. the first argument will always be the generated file "a.out"
+
+
+ : this is a binary file that is pass
+ man is the manual command
+ man 2 access
+ man access: check accesibility of the file
+
+ what is chmod?
+ ls -al -> see the list of 
+
+ SYSTEM CALL COMMANDS 
+
+
+ read(fd, buffer, count) : works in a sequential manner 
+    fd: 
+    buffer: character edit and give certain sizes and pass it as a second argument ( buffer means intermediate)
+    count: read and count the bytes/character from the file and then returns it
+    123456789
+    read(fd, buffer,5) => it will run up to five
+    read(fd, buffer,5) => it will start at 6 because it runs sequencially
+returns count 
+
+write(fd, buffer, count):
+    returns counts: 
+
+
+Iseek(fd, offset, whence):
+    offset: select the point that you wnat to start from
+    whence: different positions start, directly to a point or just go to the end of the file, different flags for this paramenters are found at... 
+
+close(fd):
+    fd: make sure when we are done with the file make sure that we close it so we have free space.
+    return code: if we get -1 it is because we have some error 
+
+unlink(name):
+    "This is use to the delete the named file
+
+
+ flags : 
+    O_RDONLY: read only when opening a file 
+    O_WRONLY: write only format
+    O_CREAT: if we pass this flag we don't have to use the creat command(whenever creating a file make sure that the right permissions are given to the file)
+    (there is a list of modes that can be used)
+    O_RDONLY| O_CREAT: creates a file and give the permission to read only
+    vi [filename]: open a file to edit in read and write mode
+
+
+gcc open_file.c -o open
+
+./open sample.text 
+cal 
+cal 2021
+
+
+man 2 read 
+man close
+man 2 write
+
+- : a minus means that it is a file 
+rw:
+r: read
+x: execute
+d: if it is a d in front it means is a directory
+
+u - user
+g - group
+o - other people(from outside world)
+
